@@ -1,0 +1,12 @@
+.ErrorMessage {
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  background-color: firebrick;
+  color: ghostwhite;
+}

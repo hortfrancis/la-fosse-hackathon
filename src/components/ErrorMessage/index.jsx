@@ -1,3 +1,9 @@
+import "./style.css";
+
 export default function ErrorMessage() {
-  return " OH NO!";
+  return (
+    <div className="ErrorMessage">
+      <span>Not a pokemon!</span>
+    </div>
+  );
 }
