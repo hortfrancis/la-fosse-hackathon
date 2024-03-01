@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Pokedex, Pokecard, SearchForm } from "./components";
+import { Pokedex, Pokecard, SearchForm, ErrorMessage } from "./components";
 
 import "./styles.css";
 
 export default function App() {
   const [pokemonNames, setPokemonNames] = useState([]);
   const [pokeData, setpokeData] = useState([]);
+
+  const [error, setError] = useState(false);
 
   const fetchData = async (pokemon) => {
     const response = await fetch(
@@ -47,6 +49,12 @@ export default function App() {
         const results = await Promise.all(promises);
         setpokeData(results);
       } catch (error) {
+        setError(true);
+
+        setTimeout(() => {
+          setError(false);
+        }, 3000);
+
         console.error(error);
         setPokemonNames((prevState) =>
           prevState.slice(0, prevState.length - 1),
@@ -60,6 +68,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Pokedex</h1>
+      {error && <ErrorMessage />}
       <SearchForm addPokemonName={addPokemonName} />
       <Pokedex data={pokeData} />
     </div>
