@@ -1,0 +1,33 @@
+body {
+  font-family: "Titillium Web", sans-serif;
+  background-color: ghostwhite;
+  color: darkslategray;
+}
+
+.App {
+  margin: 3rem;
+
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    margin: 2.5rem;
+  }
+}
+
+/* .titillium-web-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-semibold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+} */

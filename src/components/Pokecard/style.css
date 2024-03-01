@@ -1,0 +1,106 @@
+.Pokecard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  max-width: 8rem;
+  min-width: 12rem;
+  padding: 2rem 1rem;
+  border: 0.2rem solid grey;
+  border-radius: 1rem;
+  /* background-color: ; */
+  background-color: #eeeeee;
+
+  top: 0;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .type-data {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .type-flag {
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  .type {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+  }
+
+  .type--normal {
+    background-color: #ebd9ad;
+    color: #a38a62;
+  }
+
+  .type--fire {
+    background-color: #fdcf76;
+    color: #d84a37;
+  }
+
+  .type--water {
+    background-color: #ace2eb;
+    color: #519199;
+  }
+
+  .type--flying {
+    background-color: #b5b5e1;
+    color: #7978b3;
+  }
+
+  .type--bug {
+    background-color: #aae152;
+    color: #5f7f52;
+  }
+
+  &.type-fire {
+    background-color: #fff6e6;
+    color: #d84a37;
+    border-color: #d84a37;
+  }
+
+  &.type-water {
+    background-color: #eaf8fa;
+    border-color: #519199;
+    color: #519199;
+  }
+
+  &.type-normal {
+    background-color: #faf5ea;
+    border-color: #a38a62;
+    color: #a38a62;
+  }
+
+  &.type-flying {
+    background-color: #e7ecfe;
+    border-color: #7978b3;
+    color: #7978b3;
+  }
+
+  &.type-bug {
+    background-color: #f4fbe9;
+    border-color: #5f7f52;
+    color: #5f7f52;
+  }
+
+  &:hover {
+    /* background-color: red; */
+    top: -0.625rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  }
+}
