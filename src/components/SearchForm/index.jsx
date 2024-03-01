@@ -4,9 +4,17 @@ export default function SearchForm({ addPokemonName }) {
   const [inputText, setInputText] = useState("");
 
   const handleSubmit = (event) => {
+    // console.log("in handle submit");
+    // console.log(inputText);
+
     event.preventDefault();
-    console.log("in handle submit");
-    console.log(inputText);
+
+    if (inputText.trim() === "") {
+      console.log("empty input");
+      setInputText("");
+      return;
+    }
+
     addPokemonName(inputText);
     setInputText("");
   };
