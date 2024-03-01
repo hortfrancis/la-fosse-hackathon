@@ -1,0 +1,38 @@
+.SearchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+
+  input {
+    border: 0.2rem solid darkslategray;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    width: 100%;
+    max-width: 20rem;
+    text-align: center;
+  }
+
+  button {
+    border: 0.2rem solid firebrick;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    width: 5rem;
+    background-color: orange;
+    cursor: pointer;
+    color: darkred;
+
+    &:hover {
+      background-color: firebrick;
+      color: ghostwhite;
+    }
+
+    &:active {
+      background-color: darkred;
+      color: ghostwhite;
+    }
+  }
+}

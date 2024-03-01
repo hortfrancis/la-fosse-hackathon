@@ -1,4 +1,6 @@
-body {
+body,
+input,
+button {
   font-family: "Titillium Web", sans-serif;
   background-color: ghostwhite;
   color: darkslategray;
