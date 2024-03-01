@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./style.css";
+
 export default function SearchForm({ addPokemonName }) {
   const [inputText, setInputText] = useState("");
 
@@ -20,7 +22,7 @@ export default function SearchForm({ addPokemonName }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="SearchForm">
       <input
         type="text"
         value={inputText}
