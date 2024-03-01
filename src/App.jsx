@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import { Pokedex, Pokecard } from "./components";
 
 import "./styles.css";
+
+const pokemon = ["pikachu", "snorlax", "metapod"];
+
+
 
 const data = {
   pokemon: [
@@ -42,7 +47,24 @@ const data = {
   ],
 };
 
+// yum yum porridge is fun
+
 export default function App() {
+
+  const fetchData = async (pokemon) => {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon);
+    const data = await response.json();
+    return data;
+  };
+  
+  useEffect(() => {
+
+
+    (async () => {
+    console.log("data:", await fetchData('snorlax'));
+    })()
+  }, []);
+
   return (
     <div className="App">
       <h1>Pokedex</h1>
